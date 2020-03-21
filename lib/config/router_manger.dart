@@ -28,7 +28,7 @@ class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteName.welcome:
-        return NoAnimRouteBuilder(BookmarkPage());
+        return NoAnimRouteBuilder(HomePage());
       case RouteName.login:
         return NoAnimRouteBuilder(LoginPage());
       case RouteName.register:

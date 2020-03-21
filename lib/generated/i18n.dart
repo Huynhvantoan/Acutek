@@ -270,7 +270,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
         case "en":
           S.current = const $en();
           return SynchronousFuture<S>(S.current);
-        case "vi_VN":
+        case "vi":
           S.current = const $vi_VN();
           return SynchronousFuture<S>(S.current);
         default:
