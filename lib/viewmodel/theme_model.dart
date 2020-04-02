@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:blendtv/config/storage_manager.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/help/theme_helper.dart';
 import 'package:blendtv/res/colors.dart';
 

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:blendtv/config/router_manger.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/res/text_styles.dart';
 
 class SingUpWidget extends StatefulWidget {

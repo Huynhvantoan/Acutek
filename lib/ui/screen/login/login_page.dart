@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/ui/screen/login/widget/login_bg_widget.dart';
 import 'package:blendtv/ui/screen/login/widget/login_progress_widget.dart';
 import 'package:blendtv/ui/screen/login/widget/signup_widget.dart';

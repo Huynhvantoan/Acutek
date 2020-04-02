@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:blendtv/config/storage_manager.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 
 class LocaleModel extends ChangeNotifier {
   static const localeValueList = ['', 'vn', 'en'];

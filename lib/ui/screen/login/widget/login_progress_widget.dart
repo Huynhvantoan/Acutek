@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/res/dimens.dart';
 import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/common/constant.dart';

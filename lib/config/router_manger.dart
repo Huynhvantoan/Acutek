@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:blendtv/ui/screen/bookmark/bookmark_page.dart';
 import 'package:blendtv/ui/screen/home/home_page.dart';
-import 'package:blendtv/ui/screen/home/tab_navigator.dart';
 import 'package:blendtv/ui/screen/login/login_page.dart';
 import 'package:blendtv/ui/screen/profile/profile_page.dart';
 import 'package:blendtv/ui/widget/page_route_anim.dart';
@@ -28,7 +26,7 @@ class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteName.welcome:
-        return NoAnimRouteBuilder(HomePage());
+        return NoAnimRouteBuilder(LoginPage());
       case RouteName.login:
         return NoAnimRouteBuilder(LoginPage());
       case RouteName.register:
@@ -36,7 +34,7 @@ class Router {
       case RouteName.register_success:
         return NoAnimRouteBuilder(LoginPage());
       case RouteName.home:
-        return NoAnimRouteBuilder(TabNavigator());
+        return NoAnimRouteBuilder(HomePage());
       case RouteName.tab_home:
         return NoAnimRouteBuilder(HomePage());
       case RouteName.tab_review:

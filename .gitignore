@@ -15,7 +15,6 @@
 .pub-cache/
 .pub/
 /build/
-.gradle/
 build/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
@@ -62,3 +61,6 @@ app.*.map.json
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+assets/demo/
+gen/
+.gradle/

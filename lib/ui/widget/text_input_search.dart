@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:blendtv/common/constant.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/res/colors.dart';
 import 'package:blendtv/res/dimens.dart';
 
@@ -53,7 +53,7 @@ class _TextInputSearchState extends State<TextInputSearch> {
         controller: widget.controller,
         padding: EdgeInsets.symmetric(horizontal: DimensUtils.size16, vertical: DimensUtils.size16),
         clearButtonMode: OverlayVisibilityMode.editing,
-        placeholder: S.of(context).home_keyword,
+        placeholder: S.of(context).close,
         suffix: Container(
           margin: EdgeInsets.symmetric(horizontal: DimensUtils.size8, vertical: DimensUtils.size8),
           width: DimensUtils.size40,

@@ -8,7 +8,7 @@ import 'package:blendtv/config/router_manger.dart';
 import 'package:blendtv/config/storage_manager.dart';
 import 'package:blendtv/viewmodel/locale_model.dart';
 import 'package:blendtv/viewmodel/theme_model.dart';
-import 'generated/i18n.dart';
+import 'generated/l10n.dart';
 
 main() async {
   Provider.debugCheckInvalidValueType = null;
@@ -46,7 +46,7 @@ class App extends StatelessWidget {
               ],
               supportedLocales: S.delegate.supportedLocales,
               onGenerateRoute: Router.generateRoute,
-              initialRoute: RouteName.welcome,
+              initialRoute: RouteName.home,
             ),
           );
         }),

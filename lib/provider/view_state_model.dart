@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:blendtv/data/service/error_handle.dart';
 import 'package:blendtv/data/service/net.dart';
-import 'package:blendtv/generated/i18n.dart';
+import 'package:blendtv/generated/l10n.dart';
 import 'package:oktoast/oktoast.dart';
 
 import 'view_state.dart';
