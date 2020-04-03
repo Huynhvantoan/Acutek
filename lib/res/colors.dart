@@ -76,8 +76,10 @@ class ColorsUtils {
   static const coral = const Color(0xffff3f3f);
 
   //COLOR APP
-  static const menuBackground = const Color(0xffff3f3f);
+  static const background = const Color(0xffff3f3f);
   static const menuSelect = const Color(0xFF0115F0);
   static const menuSelectDark = const Color(0xFF000FBD);
-  static const textSelect = const Color(0xFF58565F);
+  static const menuBackground = const Color(0xFF181C49);
+  static const textSelect = const Color(0xFFB6BAC5);
+  static const textSelectDark = const Color(0xFF58565F);
 }

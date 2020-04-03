@@ -14,7 +14,7 @@ class ProfileState extends State<ProfilePage> {
       body: Stack(
         children: <Widget>[
           Center(
-            child: Text('ProfilePage', style: TextStylesUtils.styleAvenir20CoalGreyW600,),
+            child: Text('ProfilePage', style: TextStylesUtils().styleAvenir20TextSelectW500),
           )
         ],
       ),

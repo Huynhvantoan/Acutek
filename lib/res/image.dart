@@ -1,14 +1,15 @@
 export 'colors.dart';
-export 'dimens.dart';
 
 class ImagesUtils {
   static const String imageIcon = "assets/icon";
   static const String imageDir = "assets/images";
 
-  //Image
-  static const String bgLogin = "$imageDir/bg_login.webp";
-  static const String bgLoginSuccess = "$imageDir/bg_registered_successfully.webp";
-  static const String bgHeader = "$imageDir/bg_header.webp";
+  //Home
+  static const String bgFavorite = "$imageDir/landing/bg_package.webp";
+  static const String bgPackage = "$imageDir/landing/bg_package.webp";
+  static const String bgChannelList = "$imageDir/landing/bg_list_channel.webp";
+  static const String bgLogin = "$imageDir/landing/landing_login.webp";
+  static const String bgParentalControl = "$imageDir/landing/landing_parental_control.webp";
 
   //Icon
   static const String iconWerry = "$imageIcon/icon_werry.svg";

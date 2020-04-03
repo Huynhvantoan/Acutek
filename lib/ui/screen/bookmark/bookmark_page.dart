@@ -15,7 +15,7 @@ class BookmarkState extends State<BookmarkPage> {
           Center(
             child: Text(
               'BookmarkPage',
-              style: TextStylesUtils.styleAvenir20CoalGreyW600,
+              style: TextStylesUtils().styleAvenir20TextSelectW500,
             ),
           )
         ],

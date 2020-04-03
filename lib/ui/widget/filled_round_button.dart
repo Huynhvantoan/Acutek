@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:blendtv/res/colors.dart';
-import 'package:blendtv/res/dimens.dart';
 
 class FilledRoundButton extends StatefulWidget {
   final Gradient gradientColor;
@@ -63,7 +62,10 @@ class _FilledRoundButtonState extends State<FilledRoundButton> {
         ),
         boxShadow: [
           BoxShadow(
-              color: ColorsUtils.buttonShadow, offset: Offset(0, 2), blurRadius: DimensUtils.size13, spreadRadius: 0)
+              color: ColorsUtils.buttonShadow,
+              offset: Offset(0, 2),
+              blurRadius: 13,
+              spreadRadius: 0)
         ],
       ),
       child: Material(

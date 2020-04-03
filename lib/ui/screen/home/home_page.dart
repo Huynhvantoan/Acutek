@@ -2,8 +2,9 @@ import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/lib/screenutils/flutter_screenutil.dart';
 import 'package:blendtv/lib/screenutils/size_extension.dart';
 import 'package:blendtv/res/colors.dart';
-import 'package:blendtv/res/resources.dart';
+import 'package:blendtv/res/image.dart';
 import 'package:blendtv/res/text_styles.dart';
+import 'package:blendtv/ui/screen/widget/container_app.dart';
 import 'package:flutter/material.dart';
 
 enum View { TOP, BOTTOM }
@@ -35,24 +36,27 @@ class HomeState extends State<HomePage> {
                 flex: 1,
               ),
               Container(
-                height: 150.h,
+                height: 200.h,
                 child: Row(
                   children: <Widget>[
-                    buildTextMenuItem(S.of(context).homeShows),
-                    buildTextMenuItem(S.of(context).homeMovies),
-                    buildTextMenuItem(S.of(context).homeTVGuide),
-                    buildTextMenuItem(S.of(context).homeRecordings),
+                    ContainerImage(isExpanded: true, title: S.of(context).homeShows.toUpperCase()),
+                    ContainerImage(isExpanded: true, title: S.of(context).homeMovies.toUpperCase()),
+                    ContainerImage(isExpanded: true, title: S.of(context).homeTVGuide.toUpperCase()),
+                    ContainerImage(isExpanded: true, title: S.of(context).homeRecordings.toUpperCase()),
                   ],
                 ),
               ),
               Expanded(
                 child: Row(
                   children: <Widget>[
-                    buildPackage(),
-                    buildChannelList(),
+                    ContainerImage(isExpanded: true, title: S.of(context).homePackages, image: ImagesUtils.bgPackage),
+                    ContainerImage(isExpanded: true, title: S.of(context).homeChannel, image: ImagesUtils.bgChannelList),
                     Expanded(
                       child: Column(
-                        children: <Widget>[buildControl(), buildLogin()],
+                        children: <Widget>[
+                          ContainerImage(isExpanded: true, title: S.of(context).homeParental, image: ImagesUtils.bgParentalControl),
+                          ContainerImage(isExpanded: true, title: S.of(context).homeLogin, image: ImagesUtils.bgLogin),
+                        ],
                       ),
                       flex: 1,
                     )
@@ -72,9 +76,7 @@ class HomeState extends State<HomePage> {
           height: double.infinity,
           width: double.infinity,
           color: ColorsUtils.brownGrey,
-          child: Text('Toàn Weather',
-              textAlign: TextAlign.center,
-              style: TextStylesUtils.styleAvenir20WhiteW600),
+          child: Text('Toàn Weather', textAlign: TextAlign.center, style: TextStylesUtils().styleAvenir20TextSelectW500),
         ),
         flex: 1,
       );
@@ -84,74 +86,7 @@ class HomeState extends State<HomePage> {
           height: double.infinity,
           width: double.infinity,
           color: ColorsUtils.sandYellow,
-          child: Text('Toàn Vast',
-              textAlign: TextAlign.center,
-              style: TextStylesUtils.styleAvenir20WhiteW600),
-        ),
-        flex: 1,
-      );
-
-  Widget buildTextMenuItem(String textName) => Expanded(
-        child: FlatButton(
-          onPressed: () {},
-          focusColor: ColorsUtils.menuSelectDark,
-          child: Text(textName.toUpperCase(), style: TextStylesUtils.styleAvenir12BlackW400),
-        ),
-        flex: 1,
-      );
-
-  Widget buildPackage() => Expanded(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: ColorsUtils.sandYellow,
-          child: FlatButton(
-            onPressed: () {},
-            focusColor: ColorsUtils.menuSelectDark,
-            child: Text(S.of(context).homePackages, style: TextStylesUtils.styleAvenir12BlackW400),
-          ),
-        ),
-        flex: 1,
-      );
-
-  Widget buildChannelList() => Expanded(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: ColorsUtils.sandYellow,
-          child: FlatButton(
-            onPressed: () {},
-            focusColor: ColorsUtils.menuSelectDark,
-            child: Text(S.of(context).homeChannel, style: TextStylesUtils.styleAvenir12BlackW400),
-          ),
-        ),
-        flex: 1,
-      );
-
-  Widget buildControl() => Expanded(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: ColorsUtils.sandYellow,
-          child: FlatButton(
-            onPressed: () {},
-            focusColor: ColorsUtils.menuSelectDark,
-            child: Text(S.of(context).homeParental, style: TextStylesUtils.styleAvenir12BlackW400),
-          ),
-        ),
-        flex: 1,
-      );
-
-  Widget buildLogin() => Expanded(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: ColorsUtils.sandYellow,
-          child: FlatButton(
-            onPressed: () {},
-            focusColor: ColorsUtils.menuSelectDark,
-            child: Text(S.of(context).homeLogin, style: TextStylesUtils.styleAvenir12BlackW400),
-          ),
+          child: Text('Toàn Vast', textAlign: TextAlign.center, style: TextStylesUtils().styleAvenir20TextSelectW500),
         ),
         flex: 1,
       );

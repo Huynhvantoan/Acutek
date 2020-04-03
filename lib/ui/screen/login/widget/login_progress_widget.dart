@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:blendtv/generated/l10n.dart';
-import 'package:blendtv/res/dimens.dart';
 import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/common/constant.dart';
 import 'package:blendtv/config/router_manger.dart';
@@ -8,6 +7,7 @@ import 'package:blendtv/ui/widget/button_progress_indicator.dart';
 import 'package:blendtv/ui/widget/filled_round_button.dart';
 import 'package:blendtv/viewmodel/login_model.dart';
 import 'package:provider_architecture/provider_widget.dart';
+import 'package:blendtv/lib/screenutils/size_extension.dart';
 
 class LoginProgressButton extends ProviderWidget<LoginModel> {
   final nameController;
@@ -21,22 +21,22 @@ class LoginProgressButton extends ProviderWidget<LoginModel> {
   Widget build(BuildContext context, LoginModel model) {
     Widget child = model.busy
         ? Container(
-            height: DimensUtils.size50,
+            height: 50.h,
             child: Center(
               child: ButtonProgressIndicator(),
             ),
           )
         : Container(
-            height: DimensUtils.size50,
+            height: 50.h,
             child: Center(
               child: Text(
                 S.of(context).signIn,
-                style: TextStylesUtils.styleAvenir14WhiteW600,
+                style: TextStylesUtils().styleAvenir20TextSelectW500,
               ),
             ),
           );
     return FilledRoundButton.withGradient(
-      radius: DimensUtils.size10,
+      radius: 10,
       gradientColor: Constant.gradient_WaterMelon_Melon,
       child: child,
       cb: () {

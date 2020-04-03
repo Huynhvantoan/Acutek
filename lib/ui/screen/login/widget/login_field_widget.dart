@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:blendtv/generated/l10n.dart';
 import 'package:blendtv/res/colors.dart';
-import 'package:blendtv/res/dimens.dart';
 import 'package:blendtv/res/text_styles.dart';
 
 class LoginTextField extends StatefulWidget {
@@ -67,9 +66,9 @@ class _LoginTextFieldState extends State<LoginTextField> {
         textInputAction: widget.textInputAction,
         onFieldSubmitted: widget.onFieldSubmitted,
         decoration: InputDecoration(
-          prefixIcon: Icon(widget.icon, color: theme.hintColor, size: DimensUtils.size20),
+          prefixIcon: Icon(widget.icon, color: theme.hintColor, size: 20),
           hintText: widget.label,
-          hintStyle: TextStylesUtils.styleAvenir14BlackW400,
+          hintStyle: TextStylesUtils().styleAvenir20TextSelectW500,
           suffixIcon: LoginTextFieldSuffixIcon(
             controller: controller,
             obscureText: widget.obscureText,
@@ -78,7 +77,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
           filled: true,
           fillColor: ColorsUtils.white,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(DimensUtils.size30),
+            borderRadius: BorderRadius.circular(30),
           ),
         ),
       ),
@@ -99,7 +98,7 @@ class LoginTextFieldSuffixIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: DimensUtils.size8, vertical: DimensUtils.size4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.end,
@@ -116,7 +115,7 @@ class LoginTextFieldSuffixIcon extends StatelessWidget {
                 valueListenable: obscureNotifier,
                 builder: (context, value, child) => Icon(
                   Icons.remove_red_eye,
-                  size: DimensUtils.size20,
+                  size: 20,
                   color: value ? theme.hintColor : theme.accentColor,
                 ),
               ),
@@ -172,7 +171,7 @@ class _LoginTextFieldClearIconState extends State<LoginTextFieldClearIcon> {
               widget.controller.clear();
             });
           },
-          child: Icon(CupertinoIcons.clear, size: DimensUtils.size20, color: Theme.of(context).hintColor)),
+          child: Icon(CupertinoIcons.clear, size: 20, color: Theme.of(context).hintColor)),
     );
   }
 }

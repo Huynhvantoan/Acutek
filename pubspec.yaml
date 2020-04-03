@@ -48,6 +48,10 @@ flutter:
   assets:
     - assets/icon/
     - assets/images/
-    - assets/demo/
+    - assets/images/landing/
+    - assets/images/listdata/
+    - assets/images/login/
+    - assets/images/parentcontrol/
+    - assets/images/player/
 flutter_intl:
   enabled: true

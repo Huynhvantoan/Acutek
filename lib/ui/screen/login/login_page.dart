@@ -6,8 +6,7 @@ import 'package:blendtv/ui/screen/login/widget/login_progress_widget.dart';
 import 'package:blendtv/ui/screen/login/widget/signup_widget.dart';
 import 'package:blendtv/ui/widget/app_bar.dart';
 import 'package:blendtv/res/colors.dart';
-import 'package:blendtv/res/dimens.dart';
-import 'package:blendtv/res/sizebox.dart';
+import 'package:blendtv/lib/screenutils/size_extension.dart';
 import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/viewmodel/login_model.dart';
 import 'package:provider_architecture/provider_architecture.dart';
@@ -47,16 +46,22 @@ class _LoginPageState extends State<LoginPage> {
             BackgroundLogin(),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              padding: EdgeInsets.all(DimensUtils.size40),
+              padding: EdgeInsets.all(40),
               child: Form(
                 key: _formKey,
                 child: Column(mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
                   buildTextTitleLogin(),
-                  SizeBoxUtils.hGap10,
+                  SizedBox(
+                    height: 10.h,
+                  ),
                   SingUpWidget(_nameController),
-                  SizeBoxUtils.hGap40,
+                  SizedBox(
+                    height: 40.h,
+                  ),
                   buildTextUserName(),
-                  SizeBoxUtils.hGap10,
+                  SizedBox(
+                    height: 10.h,
+                  ),
                   LoginTextField(
                     label: S.of(context).login_username,
                     icon: Icons.person,
@@ -66,9 +71,13 @@ class _LoginPageState extends State<LoginPage> {
                       FocusScope.of(context).requestFocus(_pwdFocus);
                     },
                   ),
-                  SizeBoxUtils.hGap30,
+                  SizedBox(
+                    height: 30.h,
+                  ),
                   buildTextPassword(),
-                  SizeBoxUtils.hGap10,
+                  SizedBox(
+                    height: 10.h,
+                  ),
                   LoginTextField(
                     controller: _passwordController,
                     label: S.of(context).login_password,
@@ -77,7 +86,9 @@ class _LoginPageState extends State<LoginPage> {
                     focusNode: _pwdFocus,
                     textInputAction: TextInputAction.done,
                   ),
-                  SizeBoxUtils.hGap30,
+                  SizedBox(
+                    height: 30.h,
+                  ),
                   LoginProgressButton(_formKey, _nameController, _passwordController, null)
                 ]),
               ),
@@ -88,9 +99,9 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget buildTextTitleLogin() => Text(S.of(context).signIn, style: TextStylesUtils.styleAvenir20CoalGreyW600);
+  Widget buildTextTitleLogin() => Text(S.of(context).signIn, style: TextStylesUtils().styleAvenir20TextSelectW500);
 
-  Widget buildTextUserName() => Text(S.of(context).login_username, style: TextStylesUtils.styleAvenir12BrownGreyW400);
+  Widget buildTextUserName() => Text(S.of(context).login_username, style: TextStylesUtils().styleAvenir20TextSelectW500);
 
-  Widget buildTextPassword() => Text(S.of(context).login_password, style: TextStylesUtils.styleAvenir12BrownGreyW400);
+  Widget buildTextPassword() => Text(S.of(context).login_password, style: TextStylesUtils().styleAvenir20TextSelectW500);
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:blendtv/res/colors.dart';
-import 'package:blendtv/res/dimens.dart';
 import 'package:blendtv/res/text_styles.dart';
 
 enum IconType { BACK, CLOSE }
@@ -11,10 +10,16 @@ class AppBarIcon extends StatelessWidget {
   final bool isOnlyIcon;
   final Color color;
 
-  AppBarIcon.back({this.rightTitle = '', this.isOnlyIcon = false, this.color = ColorsUtils.pale})
+  AppBarIcon.back(
+      {this.rightTitle = '',
+      this.isOnlyIcon = false,
+      this.color = ColorsUtils.pale})
       : this.icon = IconType.BACK;
 
-  AppBarIcon.close({this.rightTitle = '', this.isOnlyIcon = false, this.color = ColorsUtils.pale})
+  AppBarIcon.close(
+      {this.rightTitle = '',
+      this.isOnlyIcon = false,
+      this.color = ColorsUtils.pale})
       : this.icon = IconType.CLOSE;
 
   @override
@@ -45,7 +50,7 @@ class AppBarIcon extends StatelessWidget {
       icon: Icon(
         Icons.keyboard_backspace,
         color: ColorsUtils.black,
-        size: DimensUtils.size30,
+        size: 30,
       ),
     );
   }
@@ -56,7 +61,7 @@ class AppBarIcon extends StatelessWidget {
       icon: Icon(
         Icons.close,
         color: ColorsUtils.black,
-        size: DimensUtils.size30,
+        size: 30,
       ),
     );
   }
@@ -98,7 +103,7 @@ class AppBarIcon extends StatelessWidget {
   Align buildAlignAppBar(String title) {
     return Align(
       alignment: Alignment.centerRight,
-      child: Text(title, style: TextStylesUtils.styleAvenir14WhiteW600),
+      child: Text(title, style: TextStylesUtils().styleAvenir20TextSelectW500),
     );
   }
 }
