@@ -103,7 +103,7 @@ class AppBarIcon extends StatelessWidget {
   Align buildAlignAppBar(String title) {
     return Align(
       alignment: Alignment.centerRight,
-      child: Text(title, style: TextStylesUtils().styleAvenir20TextSelectW500),
+      child: Text(title, style: TextStylesUtils().styleMedium20TextSelect),
     );
   }
 }

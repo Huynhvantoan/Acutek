@@ -1,22 +1,23 @@
+import 'package:blendtv/ui/screen/channel/channel_page.dart';
+import 'package:blendtv/ui/screen/movie/movies_page.dart';
+import 'package:blendtv/ui/screen/recording/recording_page.dart';
+import 'package:blendtv/ui/screen/show/show_page.dart';
+import 'package:blendtv/ui/screen/tvguilde/tvguide_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:blendtv/ui/screen/home/home_page.dart';
 import 'package:blendtv/ui/screen/login/login_page.dart';
-import 'package:blendtv/ui/screen/profile/profile_page.dart';
 import 'package:blendtv/ui/widget/page_route_anim.dart';
 
 class RouteName {
-  static const String welcome = 'welcome';
   static const String home = '/';
   static const String login = 'login';
   static const String register = 'register';
-  static const String register_success = 'register_success';
-  static const String setting = 'setting';
-  static const String tab_home = 'tab_home';
-  static const String tab_review = 'tab_review';
-  static const String tab_challenge = 'tab_challenge';
-  static const String tab_profile = 'tab_profile';
-  static const String tab_more = 'tab_more';
+  static const String channel = 'channel';
+  static const String movies = 'movies';
+  static const String recording = 'recording';
+  static const String show = 'show';
+  static const String tvGuide = 'tvGuide';
 }
 
 //SlideTopRouteBuilder
@@ -25,26 +26,22 @@ class RouteName {
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case RouteName.welcome:
-        return NoAnimRouteBuilder(LoginPage());
       case RouteName.login:
         return NoAnimRouteBuilder(LoginPage());
       case RouteName.register:
         return NoAnimRouteBuilder(LoginPage());
-      case RouteName.register_success:
-        return NoAnimRouteBuilder(LoginPage());
       case RouteName.home:
         return NoAnimRouteBuilder(HomePage());
-      case RouteName.tab_home:
-        return NoAnimRouteBuilder(HomePage());
-      case RouteName.tab_review:
-        return NoAnimRouteBuilder(LoginPage());
-      case RouteName.tab_challenge:
-        return NoAnimRouteBuilder(LoginPage());
-      case RouteName.tab_profile:
-        return NoAnimRouteBuilder(ProfilePage());
-      case RouteName.tab_more:
-        return NoAnimRouteBuilder(LoginPage());
+      case RouteName.channel:
+        return NoAnimRouteBuilder(ChannelListPage());
+      case RouteName.movies:
+        return NoAnimRouteBuilder(MoviesPage());
+      case RouteName.recording:
+        return NoAnimRouteBuilder(RecordingPage());
+      case RouteName.show:
+        return NoAnimRouteBuilder(ShowPage());
+      case RouteName.tvGuide:
+        return NoAnimRouteBuilder(TVGuidePage());
       default:
         return CupertinoPageRoute(
           builder: (_) => Scaffold(

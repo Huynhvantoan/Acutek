@@ -38,13 +38,13 @@ class _SingUpWidgetState extends State<SingUpWidget> {
       child: Text.rich(
         TextSpan(
           text: S.of(context).login_content1,
-          style: TextStylesUtils().styleAvenir20TextSelectW500,
+          style: TextStylesUtils().styleMedium20TextSelect,
           children: [
             TextSpan(
                 text: S.of(context).signUp,
                 recognizer: _recognizerRegister,
-                style: TextStylesUtils().styleAvenir20TextSelectW500),
-            TextSpan(text: S.of(context).login_content2, style: TextStylesUtils().styleAvenir20TextSelectW500)
+                style: TextStylesUtils().styleMedium20TextSelect),
+            TextSpan(text: S.of(context).login_content2, style: TextStylesUtils().styleMedium20TextSelect)
           ],
         ),
       ),

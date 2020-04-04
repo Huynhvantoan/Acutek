@@ -31,7 +31,7 @@ class LoginProgressButton extends ProviderWidget<LoginModel> {
             child: Center(
               child: Text(
                 S.of(context).signIn,
-                style: TextStylesUtils().styleAvenir20TextSelectW500,
+                style: TextStylesUtils().styleMedium20TextSelect,
               ),
             ),
           );
@@ -44,7 +44,7 @@ class LoginProgressButton extends ProviderWidget<LoginModel> {
           if (emailController != null) {
             model.register(nameController.text, emailController.text, passwordController.text).then((value) {
               if (value) {
-                Navigator.pushNamed(context, RouteName.register_success);
+                Navigator.pushNamed(context, RouteName.home);
               } else {
                 model.showErrorMessage(context);
               }

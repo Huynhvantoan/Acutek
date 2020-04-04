@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:blendtv/res/colors.dart';
 import 'package:blendtv/res/text_styles.dart';
 
-class ProfilePage extends StatefulWidget {
+class RecordingPage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => ProfileState();
+  State<StatefulWidget> createState() => RecordingState();
 }
 
-class ProfileState extends State<ProfilePage> {
+class RecordingState extends State<RecordingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
           Center(
-            child: Text('ProfilePage', style: TextStylesUtils().styleMedium20TextSelect),
+            child: Text('ShowPage', style: TextStylesUtils().styleMedium20TextSelect),
           )
         ],
       ),

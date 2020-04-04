@@ -3,7 +3,6 @@ import 'package:blendtv/lib/screenutils/flutter_screenutil.dart';
 import 'package:blendtv/lib/screenutils/size_extension.dart';
 import 'package:blendtv/res/colors.dart';
 import 'package:blendtv/res/image.dart';
-import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/ui/screen/widget/container_app.dart';
 import 'package:flutter/material.dart';
 
@@ -49,13 +48,33 @@ class HomeState extends State<HomePage> {
               Expanded(
                 child: Row(
                   children: <Widget>[
-                    ContainerImage(isExpanded: true, title: S.of(context).homePackages, image: ImagesUtils.bgPackage),
-                    ContainerImage(isExpanded: true, title: S.of(context).homeChannel, image: ImagesUtils.bgChannelList),
+                    ContainerImage(
+                        isExpanded: true,
+                        title: S.of(context).homePackages,
+                        colorFocus: ColorsUtils.veryLightBlueThree,
+                        isCenter: false,
+                        image: ImagesUtils.bgPackage),
+                    ContainerImage(
+                        isExpanded: true,
+                        title: S.of(context).homeChannel,
+                        colorFocus: ColorsUtils.veryLightBlueThree,
+                        isCenter: false,
+                        image: ImagesUtils.bgChannelList),
                     Expanded(
                       child: Column(
                         children: <Widget>[
-                          ContainerImage(isExpanded: true, title: S.of(context).homeParental, image: ImagesUtils.bgParentalControl),
-                          ContainerImage(isExpanded: true, title: S.of(context).homeLogin, image: ImagesUtils.bgLogin),
+                          ContainerImage(
+                              isExpanded: true,
+                              title: S.of(context).homeParental,
+                              colorFocus: ColorsUtils.veryLightBlueThree,
+                              isCenter: false,
+                              image: ImagesUtils.bgParentalControl),
+                          ContainerImage(
+                              isExpanded: true,
+                              title: S.of(context).homeLogin,
+                              colorFocus: ColorsUtils.veryLightBlueThree,
+                              isCenter: false,
+                              image: ImagesUtils.bgLogin),
                         ],
                       ),
                       flex: 1,
@@ -75,8 +94,7 @@ class HomeState extends State<HomePage> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          color: ColorsUtils.brownGrey,
-          child: Text('Toàn Weather', textAlign: TextAlign.center, style: TextStylesUtils().styleAvenir20TextSelectW500),
+          color: ColorsUtils.brownishGrey,
         ),
         flex: 1,
       );
@@ -85,8 +103,7 @@ class HomeState extends State<HomePage> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          color: ColorsUtils.sandYellow,
-          child: Text('Toàn Vast', textAlign: TextAlign.center, style: TextStylesUtils().styleAvenir20TextSelectW500),
+          color: ColorsUtils.charcoalGrey,
         ),
         flex: 1,
       );

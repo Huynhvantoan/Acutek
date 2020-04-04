@@ -99,9 +99,9 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget buildTextTitleLogin() => Text(S.of(context).signIn, style: TextStylesUtils().styleAvenir20TextSelectW500);
+  Widget buildTextTitleLogin() => Text(S.of(context).signIn, style: TextStylesUtils().styleMedium20TextSelect);
 
-  Widget buildTextUserName() => Text(S.of(context).login_username, style: TextStylesUtils().styleAvenir20TextSelectW500);
+  Widget buildTextUserName() => Text(S.of(context).login_username, style: TextStylesUtils().styleMedium20TextSelect);
 
-  Widget buildTextPassword() => Text(S.of(context).login_password, style: TextStylesUtils().styleAvenir20TextSelectW500);
+  Widget buildTextPassword() => Text(S.of(context).login_password, style: TextStylesUtils().styleMedium20TextSelect);
 }

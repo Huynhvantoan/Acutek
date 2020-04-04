@@ -68,7 +68,7 @@ class _LoginTextFieldState extends State<LoginTextField> {
         decoration: InputDecoration(
           prefixIcon: Icon(widget.icon, color: theme.hintColor, size: 20),
           hintText: widget.label,
-          hintStyle: TextStylesUtils().styleAvenir20TextSelectW500,
+          hintStyle: TextStylesUtils().styleMedium20TextSelect,
           suffixIcon: LoginTextFieldSuffixIcon(
             controller: controller,
             obscureText: widget.obscureText,

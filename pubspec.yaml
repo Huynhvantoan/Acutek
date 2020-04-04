@@ -39,12 +39,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   fonts:
-    - family: AvenirNext
+    - family: Roboto
       fonts:
-        - asset: assets/fonts/AvenirNext.ttc
-    - family: Helvetica
+        - asset: assets/fonts/roboto.ttf
+    - family: RobotoLight
       fonts:
-        - asset: assets/fonts/Helvetica-Regular.ttf
+        - asset: assets/fonts/roboto_light.ttf
+    - family: RobotoMedium
+      fonts:
+        - asset: assets/fonts/roboto_medium.ttf
   assets:
     - assets/icon/
     - assets/images/
