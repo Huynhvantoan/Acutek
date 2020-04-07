@@ -21,13 +21,13 @@ class LoginProgressButton extends ProviderWidget<LoginModel> {
   Widget build(BuildContext context, LoginModel model) {
     Widget child = model.busy
         ? Container(
-            height: 50.h,
+            height: 150.h,
             child: Center(
               child: ButtonProgressIndicator(),
             ),
           )
         : Container(
-            height: 50.h,
+            height: 150.h,
             child: Center(
               child: Text(
                 S.of(context).signIn,

@@ -63,91 +63,91 @@ class S {
     );
   }
 
-  String get login_content1 {
+  String get loginContent1 {
     return Intl.message(
       'Do not have an account? So let\'s ',
-      name: 'login_content1',
+      name: 'loginContent1',
       desc: '',
       args: [],
     );
   }
 
-  String get login_content2 {
+  String get loginContent2 {
     return Intl.message(
       ' right away',
-      name: 'login_content2',
+      name: 'loginContent2',
       desc: '',
       args: [],
     );
   }
 
-  String get login_title {
+  String get loginTitle {
     return Intl.message(
       'Username',
-      name: 'login_title',
+      name: 'loginTitle',
       desc: '',
       args: [],
     );
   }
 
-  String get login_username {
+  String get loginUsername {
     return Intl.message(
       'Username',
-      name: 'login_username',
+      name: 'loginUsername',
       desc: '',
       args: [],
     );
   }
 
-  String get login_password {
+  String get loginPassword {
     return Intl.message(
       'Password',
-      name: 'login_password',
+      name: 'loginPassword',
       desc: '',
       args: [],
     );
   }
 
-  String get login_confirm_password {
+  String get loginConfirmPassword {
     return Intl.message(
       'Confirm Password',
-      name: 'login_confirm_password',
+      name: 'loginConfirmPassword',
       desc: '',
       args: [],
     );
   }
 
-  String get register_content1 {
+  String get registerContent1 {
     return Intl.message(
       'Do you already have an account? So please ',
-      name: 'register_content1',
+      name: 'registerContent1',
       desc: '',
       args: [],
     );
   }
 
-  String get register_content2 {
+  String get registerContent2 {
     return Intl.message(
       ' okay',
-      name: 'register_content2',
+      name: 'registerContent2',
       desc: '',
       args: [],
     );
   }
 
-  String get register_complete {
+  String get registerComplete {
     return Intl.message(
       'Registration successful',
-      name: 'register_complete',
+      name: 'registerComplete',
       desc: '',
       args: [],
     );
   }
 
-  String get register_content {
+  String get registerContent {
     return Intl.message(
       'Thank you for taking the time to register for an account with Werry. Now start the experience!',
-      name: 'register_content',
+      name: 'registerContent',
       desc: '',
       args: [],
     );
@@ -463,6 +463,294 @@ class S {
     return Intl.message(
       'Login',
       name: 'homeLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuProfile {
+    return Intl.message(
+      'My Account',
+      name: 'homeMenuProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuLogin {
+    return Intl.message(
+      'Login',
+      name: 'homeMenuLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuHome {
+    return Intl.message(
+      'Home',
+      name: 'homeMenuHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuLiveTv {
+    return Intl.message(
+      'TV Guide',
+      name: 'homeMenuLiveTv',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuMovies {
+    return Intl.message(
+      'Movies',
+      name: 'homeMenuMovies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuTvShow {
+    return Intl.message(
+      'Shows',
+      name: 'homeMenuTvShow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuRecord {
+    return Intl.message(
+      'Recordings',
+      name: 'homeMenuRecord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuParentControl {
+    return Intl.message(
+      'Parental Control',
+      name: 'homeMenuParentControl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuFavorite {
+    return Intl.message(
+      'Your Watchlist',
+      name: 'homeMenuFavorite',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuPackage {
+    return Intl.message(
+      'Packages',
+      name: 'homeMenuPackage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuChannelList {
+    return Intl.message(
+      'Channel List',
+      name: 'homeMenuChannelList',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get homeMenuSpeedTest {
+    return Intl.message(
+      'Speed Test',
+      name: 'homeMenuSpeedTest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlTitle {
+    return Intl.message(
+      'PIN PROTECT ACCESS TO ANY OF THE FOLLOWING:',
+      name: 'parentalControlTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlEnable {
+    return Intl.message(
+      'Enable\nAll',
+      name: 'parentalControlEnable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlDone {
+    return Intl.message(
+      'Done',
+      name: 'parentalControlDone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlConfirm {
+    return Intl.message(
+      'Confirm',
+      name: 'parentalControlConfirm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlSetPin {
+    return Intl.message(
+      'Set PIN',
+      name: 'parentalControlSetPin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlChangePin {
+    return Intl.message(
+      'Change PIN',
+      name: 'parentalControlChangePin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlResetPin {
+    return Intl.message(
+      'Reset PIN',
+      name: 'parentalControlResetPin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalControlDefaultPinIs1234 {
+    return Intl.message(
+      'Please Change Default PIN 0–0-0-0, then Press Save',
+      name: 'parentalControlDefaultPinIs1234',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalChangePinOk {
+    return Intl.message(
+      'Change PIN Confirmed!',
+      name: 'parentalChangePinOk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalChangePinError {
+    return Intl.message(
+      'Change PIN Failed!',
+      name: 'parentalChangePinError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalUpdateSettingOk {
+    return Intl.message(
+      'Update Setting Confirmed!',
+      name: 'parentalUpdateSettingOk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalUpdateSettingError {
+    return Intl.message(
+      'Update Failed!',
+      name: 'parentalUpdateSettingError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalResetSettingOk {
+    return Intl.message(
+      'Reset Setting Confirmed',
+      name: 'parentalResetSettingOk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalResetSettingError {
+    return Intl.message(
+      'Reset Failed',
+      name: 'parentalResetSettingError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get verifyLockOk {
+    return Intl.message(
+      'PIN Code Verify Confirmed!',
+      name: 'verifyLockOk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get verifyLockError {
+    return Intl.message(
+      'PIN Code Verify Failed!',
+      name: 'verifyLockError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalPc {
+    return Intl.message(
+      'Enable Parental Control',
+      name: 'parentalPc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalAdult {
+    return Intl.message(
+      'Hide Adult Content',
+      name: 'parentalAdult',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get parentalAge {
+    return Intl.message(
+      'Change Age Rating',
+      name: 'parentalAge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  String get resetPin {
+    return Intl.message(
+      'Reset PIN Setting? ',
+      name: 'resetPin',
       desc: '',
       args: [],
     );

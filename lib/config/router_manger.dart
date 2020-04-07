@@ -1,5 +1,7 @@
 import 'package:blendtv/ui/screen/channel/channel_page.dart';
 import 'package:blendtv/ui/screen/movie/movies_page.dart';
+import 'package:blendtv/ui/screen/package/package_page.dart';
+import 'package:blendtv/ui/screen/parental/parental_page.dart';
 import 'package:blendtv/ui/screen/recording/recording_page.dart';
 import 'package:blendtv/ui/screen/show/show_page.dart';
 import 'package:blendtv/ui/screen/tvguilde/tvguide_page.dart';
@@ -18,6 +20,8 @@ class RouteName {
   static const String recording = 'recording';
   static const String show = 'show';
   static const String tvGuide = 'tvGuide';
+  static const String package = 'package';
+  static const String parental = 'parental';
 }
 
 //SlideTopRouteBuilder
@@ -42,6 +46,10 @@ class Router {
         return NoAnimRouteBuilder(ShowPage());
       case RouteName.tvGuide:
         return NoAnimRouteBuilder(TVGuidePage());
+      case RouteName.package:
+        return NoAnimRouteBuilder(PackagePage());
+      case RouteName.parental:
+        return NoAnimRouteBuilder(ParentalControlPage());
       default:
         return CupertinoPageRoute(
           builder: (_) => Scaffold(
@@ -70,8 +78,7 @@ class PopRoute extends PopupRoute {
   String get barrierLabel => null;
 
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation,
-      Animation<double> secondaryAnimation) {
+  Widget buildPage(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
     return child;
   }
 

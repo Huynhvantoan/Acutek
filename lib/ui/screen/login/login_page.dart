@@ -32,8 +32,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    _nameController.text = 'tranminh1236@gmail.com';
-    _passwordController.text = 'soluuhuong1236';
+    _nameController.text = 'hvtoan.dev@gmail.com';
+    _passwordController.text = '123456';
     return ViewModelProvider<LoginModel>.withoutConsumer(
       viewModel: LoginModel(),
       onModelReady: (model) => model.idle,
@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: 10.h,
                   ),
                   LoginTextField(
-                    label: S.of(context).login_username,
+                    label: S.of(context).loginUsername,
                     icon: Icons.person,
                     controller: _nameController,
                     textInputAction: TextInputAction.next,
@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   LoginTextField(
                     controller: _passwordController,
-                    label: S.of(context).login_password,
+                    label: S.of(context).loginPassword,
                     icon: Icons.vpn_key,
                     obscureText: true,
                     focusNode: _pwdFocus,
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget buildTextTitleLogin() => Text(S.of(context).signIn, style: TextStylesUtils().styleMedium20TextSelect);
 
-  Widget buildTextUserName() => Text(S.of(context).login_username, style: TextStylesUtils().styleMedium20TextSelect);
+  Widget buildTextUserName() => Text(S.of(context).loginUsername, style: TextStylesUtils().styleMedium20TextSelect);
 
-  Widget buildTextPassword() => Text(S.of(context).login_password, style: TextStylesUtils().styleMedium20TextSelect);
+  Widget buildTextPassword() => Text(S.of(context).loginPassword, style: TextStylesUtils().styleMedium20TextSelect);
 }

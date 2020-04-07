@@ -76,6 +76,7 @@ class ColorsUtils {
   static const coral = const Color(0xffff3f3f);
 
   //COLOR APP
+  static const transparent = const Color(0x00000000);
   static const background = const Color(0xffff3f3f);
   static const menuSelect = const Color(0xFF0115F0);
   static const menuSelectDark = const Color(0xFF000FBD);
