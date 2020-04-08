@@ -1,12 +1,11 @@
 import 'package:blendtv/config/router_manger.dart';
 import 'package:blendtv/generated/l10n.dart';
-import 'package:blendtv/ui/screen/widget/container_button.dart';
+import 'package:blendtv/lib/screenutils/size_extension.dart';
+import 'package:blendtv/res/colors.dart';
+import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/ui/screen/widget/container_button_border.dart';
 import 'package:blendtv/ui/screen/widget/parental_button.dart';
 import 'package:flutter/material.dart';
-import 'package:blendtv/res/colors.dart';
-import 'package:blendtv/res/text_styles.dart';
-import 'package:blendtv/lib/screenutils/size_extension.dart';
 
 class ParentalControlPage extends StatefulWidget {
   @override
