@@ -4,8 +4,8 @@ import 'package:blendtv/lib/screenutils/flutter_screenutil.dart';
 import 'package:blendtv/lib/screenutils/size_extension.dart';
 import 'package:blendtv/res/colors.dart';
 import 'package:blendtv/res/image.dart';
+import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/ui/screen/widget/container_home.dart';
-import 'package:blendtv/ui/screen/widget/container_home_title.dart';
 import 'package:flutter/material.dart';
 
 enum View { TOP, BOTTOM }
@@ -40,28 +40,28 @@ class HomeState extends State<HomePage> {
                 height: 200.h,
                 child: Row(
                   children: <Widget>[
-                    ContainerImage(
+                    ContainerButton(
                       isExpanded: true,
                       title: S.of(context).homeShows.toUpperCase(),
                       cb: () {
                         Navigator.pushNamed(context, RouteName.show);
                       },
                     ),
-                    ContainerImage(
+                    ContainerButton(
                       isExpanded: true,
                       title: S.of(context).homeMovies.toUpperCase(),
                       cb: () {
                         Navigator.pushNamed(context, RouteName.movies);
                       },
                     ),
-                    ContainerImage(
+                    ContainerButton(
                       isExpanded: true,
                       title: S.of(context).homeTVGuide.toUpperCase(),
                       cb: () {
                         Navigator.pushNamed(context, RouteName.tvGuide);
                       },
                     ),
-                    ContainerImage(
+                    ContainerButton(
                       isExpanded: true,
                       title: S.of(context).homeRecordings.toUpperCase(),
                       cb: () {
@@ -74,20 +74,20 @@ class HomeState extends State<HomePage> {
               Expanded(
                 child: Row(
                   children: <Widget>[
-                    ContainerHome(
+                    ContainerButton(
                       isExpanded: true,
                       title: S.of(context).homePackages,
-                      colorFocus: ColorsUtils.veryLightBlueThree,
+                      bgColorFocus: ColorsUtils.veryLightBlueThree,
                       isCenter: false,
                       image: ImagesUtils.bgPackage,
                       cb: () {
                         Navigator.pushNamed(context, RouteName.package);
                       },
                     ),
-                    ContainerHome(
+                    ContainerButton(
                       isExpanded: true,
                       title: S.of(context).homeChannel,
-                      colorFocus: ColorsUtils.veryLightBlueThree,
+                      bgColorFocus: ColorsUtils.veryLightBlueThree,
                       isCenter: false,
                       image: ImagesUtils.bgChannelList,
                       cb: () {
@@ -97,20 +97,20 @@ class HomeState extends State<HomePage> {
                     Expanded(
                       child: Column(
                         children: <Widget>[
-                          ContainerHome(
+                          ContainerButton(
                             isExpanded: true,
                             title: S.of(context).homeParental,
-                            colorFocus: ColorsUtils.veryLightBlueThree,
+                            bgColorFocus: ColorsUtils.veryLightBlueThree,
                             isCenter: false,
                             image: ImagesUtils.bgParentalControl,
                             cb: () {
                               Navigator.pushNamed(context, RouteName.parental);
                             },
                           ),
-                          ContainerHome(
+                          ContainerButton(
                             isExpanded: true,
                             title: S.of(context).homeLogin,
-                            colorFocus: ColorsUtils.veryLightBlueThree,
+                            bgColorFocus: ColorsUtils.veryLightBlueThree,
                             isCenter: false,
                             image: ImagesUtils.bgHomeLogin,
                             cb: () {
@@ -136,7 +136,25 @@ class HomeState extends State<HomePage> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          color: ColorsUtils.brownishGrey,
+          color: ColorsUtils.background,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image(
+                image: AssetImage(ImagesUtils.iconLanding),
+                width: 600.w,
+                height: 250.h,
+              ),
+              SizedBox(
+                height: 100.h,
+              ),
+              Text(
+                "4:51 pm  | Tuesday, April 07th, 2020 | 89F",
+                style: TextStylesUtils().styleMedium20White,
+              ),
+            ],
+          ),
         ),
         flex: 1,
       );
@@ -145,7 +163,7 @@ class HomeState extends State<HomePage> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          color: ColorsUtils.charcoalGrey,
+          color: ColorsUtils.black,
         ),
         flex: 1,
       );

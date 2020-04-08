@@ -77,10 +77,11 @@ class ColorsUtils {
 
   //COLOR APP
   static const transparent = const Color(0x00000000);
-  static const background = const Color(0xffff3f3f);
+  static const background = const Color(0xFF272726);
   static const menuSelect = const Color(0xFF0115F0);
   static const menuSelectDark = const Color(0xFF000FBD);
   static const menuBackground = const Color(0xFF181C49);
+  static const menuCategory = const Color(0xFFC7C7C7);
   static const textSelect = const Color(0xFFB6BAC5);
   static const textSelectDark = const Color(0xFF58565F);
 }

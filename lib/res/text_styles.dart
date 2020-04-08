@@ -10,6 +10,27 @@ class TextStylesUtils {
   static const FontFamilyLight = 'RobotoLight';
   static const fontFamilyMedium = "RobotoMedium";
 
+  final styleMedium18Black = TextStyle(
+    fontFamily: fontFamilyMedium,
+    color: ColorsUtils.black,
+    fontSize: ScreenUtil().setSp(18, allowFontScalingSelf: true),
+    fontStyle: FontStyle.normal,
+  );
+
+  final styleMedium18White = TextStyle(
+    fontFamily: fontFamilyMedium,
+    color: ColorsUtils.white,
+    fontSize: ScreenUtil().setSp(18, allowFontScalingSelf: true),
+    fontStyle: FontStyle.normal,
+  );
+
+  final styleMedium20Black = TextStyle(
+    fontFamily: fontFamilyMedium,
+    color: ColorsUtils.black,
+    fontSize: ScreenUtil().setSp(20, allowFontScalingSelf: true),
+    fontStyle: FontStyle.normal,
+  );
+
   final styleMedium20TextSelect = TextStyle(
     fontFamily: fontFamilyMedium,
     color: ColorsUtils.textSelect,

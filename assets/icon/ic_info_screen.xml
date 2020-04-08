@@ -1,0 +1,10 @@
+<vector
+    width="100dp"
+    height="35dp"
+    viewportWidth="3470"
+    viewportHeight="1170">
+  <path
+      pathData="M197,880l148,-290 -147,-288c-82,-159 -148,-292 -148,-295 0,-4 769,-7 1710,-7l1710,0 0,585 0,585 -1711,0 -1711,0 149,-290z"
+      fillColor="#377ae9"
+      strokeColor="#00000000"/>
+</vector>
