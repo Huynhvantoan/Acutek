@@ -31,25 +31,25 @@ class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteName.login:
-        return NoAnimRouteBuilder(LoginPage());
+        return FadeRouteBuilder(LoginPage());
       case RouteName.register:
-        return NoAnimRouteBuilder(LoginPage());
+        return FadeRouteBuilder(LoginPage());
       case RouteName.home:
-        return NoAnimRouteBuilder(HomePage());
+        return FadeRouteBuilder(HomePage());
       case RouteName.channel:
-        return NoAnimRouteBuilder(ChannelListPage());
+        return FadeRouteBuilder(ChannelListPage());
       case RouteName.movies:
-        return NoAnimRouteBuilder(MoviesPage());
+        return FadeRouteBuilder(MoviesPage());
       case RouteName.recording:
-        return NoAnimRouteBuilder(RecordingPage());
+        return FadeRouteBuilder(RecordingPage());
       case RouteName.show:
-        return NoAnimRouteBuilder(ShowPage());
+        return FadeRouteBuilder(ShowPage());
       case RouteName.tvGuide:
-        return NoAnimRouteBuilder(TVGuidePage());
+        return FadeRouteBuilder(TVGuidePage());
       case RouteName.package:
-        return NoAnimRouteBuilder(PackagePage());
+        return FadeRouteBuilder(PackagePage());
       case RouteName.parental:
-        return NoAnimRouteBuilder(ParentalControlPage());
+        return FadeRouteBuilder(ParentalControlPage());
       default:
         return CupertinoPageRoute(
           builder: (_) => Scaffold(

@@ -51,4 +51,11 @@ class TextStylesUtils {
     fontSize: ScreenUtil().setSp(20, allowFontScalingSelf: true),
     fontStyle: FontStyle.normal,
   );
+
+  final styleMedium30White = TextStyle(
+    fontFamily: fontFamilyMedium,
+    color: ColorsUtils.white,
+    fontSize: ScreenUtil().setSp(30, allowFontScalingSelf: true),
+    fontStyle: FontStyle.normal,
+  );
 }

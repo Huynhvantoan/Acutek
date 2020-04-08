@@ -5,7 +5,7 @@ import 'package:blendtv/lib/screenutils/size_extension.dart';
 import 'package:blendtv/res/colors.dart';
 import 'package:blendtv/res/image.dart';
 import 'package:blendtv/res/text_styles.dart';
-import 'package:blendtv/ui/screen/widget/container_home.dart';
+import 'package:blendtv/ui/screen/widget/container_button.dart';
 import 'package:flutter/material.dart';
 
 enum View { TOP, BOTTOM }
