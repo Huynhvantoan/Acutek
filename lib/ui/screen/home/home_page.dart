@@ -8,8 +8,6 @@ import 'package:blendtv/res/text_styles.dart';
 import 'package:blendtv/ui/screen/widget/container_button.dart';
 import 'package:flutter/material.dart';
 
-enum View { TOP, BOTTOM }
-
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => HomeState();

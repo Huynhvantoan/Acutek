@@ -1,3 +1,7 @@
+import 'package:blendtv/data/model/epg_entity.dart';
+import 'package:blendtv/res/colors.dart';
+import 'package:blendtv/res/text_styles.dart';
+import 'package:blendtv/ui/screen/widget/container_button_epg.dart';
 import 'package:flutter/material.dart';
 
 class TVGuidePage extends StatefulWidget {
@@ -6,56 +10,37 @@ class TVGuidePage extends StatefulWidget {
 }
 
 class TVGuideState extends State<TVGuidePage> {
-  ScrollController _scrollControllerChannel;
   ScrollController _scrollControllerTimeline;
-  ScrollController _scrollControllerVetical;
 
   @override
   void initState() {
     super.initState();
-    _scrollControllerVetical = ScrollController();
     _scrollControllerTimeline = ScrollController();
-    _scrollControllerChannel = ScrollController();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Row(
+        child: Column(
           children: <Widget>[
+            buildTimeLine(),
             Expanded(
-              child: buildChannel(),
-            ),
-            Expanded(
-              flex: 10,
+              flex: 1,
               child: SingleChildScrollView(
-                primary: false,
-                controller: _scrollControllerTimeline,
-                scrollDirection: Axis.horizontal,
-                child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Expanded(
-                        child: buildTimeLine(),
-                      ),
-                      Expanded(
-                        flex: 10,
-                        child: listViewEpgHorizalNew(),
-                      ),
-                    ],
-                  ),
+                scrollDirection: Axis.vertical,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[buildChannel(), listViewEpgHorizalNew()],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
-
 
   Widget buildTimeLine() {
     final listimeline = [
@@ -87,88 +72,85 @@ class TVGuideState extends State<TVGuidePage> {
       "12:30"
     ];
     return Container(
-      height: 50,
-      child: ListView.builder(
-          controller: _scrollControllerTimeline,
-          physics: NeverScrollableScrollPhysics(),
-          scrollDirection: Axis.horizontal,
-          shrinkWrap: true,
-          itemExtent: 100,
-          itemCount: listimeline.length,
-          itemBuilder: (context, position) {
-            return Padding(
-              padding: const EdgeInsets.only(
-                  left: 16.0, top: 8.0, right: 16.0, bottom: 8.0),
-              child: Text(
-                listimeline[position],
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontSize: 22.0,
-                ),
-              ),
-            );
-          }),
+        width: 30000.0,
+        height: 50,
+        child: Padding(
+          padding: EdgeInsets.only(left: 100),
+          child: ListView.builder(
+              controller: _scrollControllerTimeline,
+              physics: NeverScrollableScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              itemCount: listimeline.length,
+              itemBuilder: (context, position) {
+                return Container(
+                  width: 150,
+                  height: 50,
+                  child: Text(
+                    listimeline[position],
+                    style: TextStylesUtils().styleMedium20Black,
+                  ),
+                );
+              }),
+        )
     );
   }
 
+  final listChannel = [
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "enc",
+    "tyb",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc",
+    "tyb",
+    "acb",
+    "bca",
+    "enc"
+  ];
+
   Widget buildChannel() {
-    final listChannel = [
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "enc",
-      "tyb",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc",
-      "tyb",
-      "acb",
-      "bca",
-      "enc"
-    ];
-    return Container(
-      width: 100,
+    return Expanded(
+      flex: 1,
       child: ListView.builder(
-        controller: _scrollControllerChannel,
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
-        itemExtent: 150,
+        itemExtent: 50,
         itemBuilder: (context, position) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(
-                    left: 16.0, top: 8.0, right: 16.0, bottom: 8.0),
+                padding: const EdgeInsets.only(left: 16.0, top: 8.0, right: 16.0, bottom: 8.0),
                 child: Text(
                   listChannel[position],
                   style: TextStyle(
@@ -181,7 +163,7 @@ class TVGuideState extends State<TVGuidePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Divider(
-                  height: 1.0,
+                  height: 0,
                   color: Colors.grey,
                 ),
               )
@@ -194,61 +176,121 @@ class TVGuideState extends State<TVGuidePage> {
   }
 
   Widget listViewEpgHorizalNew() {
-    return NotificationListener<ScrollNotification>(
-      child: SingleChildScrollView(
-        primary: false,
-        controller: _scrollControllerVetical,
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: _createTextColum(50),
+    return Expanded(
+      flex: 10,
+      child: NotificationListener<ScrollNotification>(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: _createTextColum(listChannel.length),
+          ),
         ),
+        // ignore: missing_return
+        onNotification: (ScrollNotification scrollInfo) {
+          //print(scrollInfo.depth);
+          print(scrollInfo.metrics.pixels);
+          //print(_scrollControllerVetical.offset);
+          //print(_scrollControllerTimeline.offset);
+          if (scrollInfo is ScrollStartNotification) {
+          } else if (scrollInfo is ScrollUpdateNotification) {
+            _scrollControllerTimeline.jumpTo(scrollInfo.metrics.pixels);
+          } else if (scrollInfo is ScrollEndNotification) {}
+        },
       ),
-      onNotification: (ScrollNotification scrollInfo) {
-        if (scrollInfo is ScrollStartNotification) {
-
-        } else if (scrollInfo is ScrollUpdateNotification) {
-          print(_scrollControllerVetical.offset);
-          _scrollControllerChannel.jumpTo(_scrollControllerVetical.offset);
-        } else if (scrollInfo is ScrollEndNotification) {
-
-        }
-      },
     );
   }
 
   List<Widget> _createTextColum(int i) {
     List<Widget> widgets = [];
-    for (int r = 1; r <= i; r++) {
+    for (int r = 0; r <= i; r++) {
       widgets.add(Row(
-        children: _createText(50),
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: _createText(24),
       ));
-      //widgets.add(newCell("Row " + r.toString() + " Column " + i.toString()));
     }
     return widgets;
   }
 
   List<Widget> _createText(int i) {
     List<Widget> widgets = [];
-    for (int r = 1; r <= i; r++) {
-      widgets.add(newCell("Row " + r.toString() + " Column " + i.toString()));
+    for (int r = 0; r <= i; r++) {
+      var listData = _createDataTest();
+      widgets.add(newCell(listData[r]));
     }
     return widgets;
   }
 
-  Widget newCell(String data) {
-    return CircleAvatar(
-        maxRadius: 80.0,
-        child: Padding(
-          padding: EdgeInsets.all(15.0),
-          child: Text(data),
-        ));
+  Widget newCell(EPGEntity data) {
+    return ContainerEPG(
+      width: data.end,
+      title: data.title,
+      bgColor: ColorsUtils.veryLightBlueTwo,
+    );
   }
 
   @override
   void dispose() {
-    _scrollControllerVetical.dispose();
-    _scrollControllerChannel.dispose();
     _scrollControllerTimeline.dispose();
     super.dispose();
+  }
+
+  List<EPGEntity> _createDataTest() {
+    List<EPGEntity> dataList = List();
+    dataList.add(EPGEntity(0, 100.0, "program1"));
+    dataList.add(EPGEntity(0, 100.0, "program2"));
+    dataList.add(EPGEntity(0, 120.0, "program3"));
+    dataList.add(EPGEntity(0, 90.0, "program4"));
+    dataList.add(EPGEntity(0, 120.0, "program5"));
+    dataList.add(EPGEntity(0, 210.0, "program6"));
+    dataList.add(EPGEntity(0, 190.0, "program7"));
+    dataList.add(EPGEntity(0, 200.0, "program8"));
+    dataList.add(EPGEntity(0, 190.0, "program4"));
+    dataList.add(EPGEntity(0, 310.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 400.0, "program2"));
+    dataList.add(EPGEntity(0, 500.0, "program3"));
+    dataList.add(EPGEntity(0, 120.0, "program4"));
+    dataList.add(EPGEntity(0, 400.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 400.0, "program2"));
+    dataList.add(EPGEntity(0, 500.0, "program3"));
+    dataList.add(EPGEntity(0, 300.0, "program4"));
+    dataList.add(EPGEntity(0, 150.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 400.0, "program2"));
+    dataList.add(EPGEntity(0, 500.0, "program3"));
+    dataList.add(EPGEntity(0, 400.0, "program4"));
+    dataList.add(EPGEntity(0, 300.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 400.0, "program2"));
+    dataList.add(EPGEntity(0, 260.0, "program3"));
+    dataList.add(EPGEntity(0, 400.0, "program4"));
+    dataList.add(EPGEntity(0, 210.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 150.0, "program2"));
+    dataList.add(EPGEntity(0, 500.0, "program3"));
+    dataList.add(EPGEntity(0, 340.0, "program4"));
+    dataList.add(EPGEntity(0, 170.0, "program5"));
+    dataList.add(EPGEntity(0, 250.0, "program1"));
+    dataList.add(EPGEntity(0, 400.0, "program2"));
+    dataList.add(EPGEntity(0, 500.0, "program3"));
+    dataList.add(EPGEntity(0, 400.0, "program4"));
+    dataList.add(EPGEntity(0, 190.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 400.0, "program2"));
+    dataList.add(EPGEntity(0, 220.0, "program3"));
+    dataList.add(EPGEntity(0, 210.0, "program4"));
+    dataList.add(EPGEntity(0, 400.0, "program5"));
+    dataList.add(EPGEntity(0, 300.0, "program1"));
+    dataList.add(EPGEntity(0, 220.0, "program2"));
+    dataList.add(EPGEntity(0, 310.0, "program3"));
+    dataList.add(EPGEntity(0, 320.0, "program4"));
+    dataList.add(EPGEntity(0, 180.0, "program5"));
+    dataList.add(EPGEntity(0, 310.0, "program6"));
+    dataList.shuffle();
+    return dataList;
   }
 }
